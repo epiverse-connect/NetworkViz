@@ -24,7 +24,8 @@ jobs:
           
       - name: execute py script # run main.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          BASE_ID: ${{ secrets.BASE_ID }}
         run: python main.py
           
       - name: commit files
