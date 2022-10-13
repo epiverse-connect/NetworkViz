@@ -43,6 +43,7 @@ try :
     airtable_api_key = os.environ['AIRTABLE_API_KEY']
     base_id = os.environ['BASE_ID'] # Epiverse TRACE
     api_status = "API keys ingested"
+    print(api_status)
 except KeyError:
     api_status = "Api keys not available"
     
