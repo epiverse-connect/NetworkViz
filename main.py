@@ -127,7 +127,7 @@ def get_airtable_data(url,headers):
 
 
 
-url_dataflow= "https://api.airtable.com/v0/appgKw8XxfNU3FeNH/{}?view=Grid+view".format(table_id_dataflows)
+url_dataflow= "https://api.airtable.com/v0/{}/{}?view=Grid+view".format(base_id,table_id_dataflows)
 headers = {"Authorization": "Bearer {}".format(airtable_api_key) }
 
 logger.info("Getting data from EPIVERSE TRACE Airtables")
@@ -145,7 +145,7 @@ airtable_dataframe_dataflow.columns =['from_dataflow','to_dataflow','status_data
 # ## Get Software Ecosystem table 
 
 
-url= "https://api.airtable.com/v0/appgKw8XxfNU3FeNH/{}?view=Grid+view".format(table_id)
+url= "https://api.airtable.com/v0/{}/{}?view=Grid+view".format(base_id,table_id)
 
 airtable_raw_dataframe = get_airtable_data(url,headers)
 airtable_raw_dataframe.loc[:,'logo_ext'] = [i[0]['url'] if str(i)!="nan" else "none" for i in airtable_raw_dataframe['Logo'].to_list() ]
