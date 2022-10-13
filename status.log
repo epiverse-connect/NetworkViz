@@ -2,3 +2,8 @@
 2022-10-12 17:45:48,435 - __main__ - INFO - Exported. That's all folks!
 2022-10-12 17:46:38,801 - __main__ - INFO - API status: Api keys not available
 2022-10-12 17:46:41,391 - __main__ - INFO - Exported. That's all folks!
+2022-10-13 12:00:01,380 - __main__ - INFO - API status: API keys ingested
+2022-10-13 12:00:01,380 - __main__ - INFO - Getting data from EPIVERSE TRACE Airtables
+2022-10-13 12:00:02,667 - __main__ - INFO - Carrying out data wrangling steps...
+2022-10-13 12:00:02,679 - __main__ - INFO - Building graph ...
+2022-10-13 12:00:03,184 - __main__ - INFO - Exported. That's all folks!
