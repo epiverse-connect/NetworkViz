@@ -502,7 +502,7 @@ for xs,xe,ys,ye in zip(x_edges_start,x_edges_end,y_edges_start,y_edges_end):
                    x_start=xs, y_start=ys, x_end=xe, y_end=ye,line_alpha=0.7))
 
 print("Exporting HTML file.")
-save(plot, filename="/Users/avinashladdha/Desktop/epi_connect_v2.html")
+save(plot, filename="index.html")
 
 logger.info("Exported. That's all folks!")
 
