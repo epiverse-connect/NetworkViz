@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        os:[ubuntu-latest]
-        node-version:[14.x]
+        node-version: [10.x, 12.x, 14.x, 16.x, 18.x]
+
     steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
     
       - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner
+        uses: actions/checkout@v3 # checkout the repository content to github runner
 
       - name: setup python
         uses: actions/setup-python@v4
