@@ -1,9 +1,5 @@
 name: run main.py
 
-runs:
-  using: 'node16'
-  main: 'main.js'
-
 on:
   schedule:
     - cron: '0 0 1 * *' 
