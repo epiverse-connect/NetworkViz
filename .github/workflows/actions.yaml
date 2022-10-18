@@ -1,5 +1,9 @@
 name: run main.py
 
+runs:
+  using: 'node16'
+  main: 'main.js'
+
 on:
   schedule:
     - cron: '0 0 1 * *' 
@@ -7,6 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os:[ubuntu-latest]
+        node-version:[14.x]
     steps:
     
       - name: checkout repo content
