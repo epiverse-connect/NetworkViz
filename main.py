@@ -342,8 +342,7 @@ TOOLTIPS = """
 #Create a plot — set dimensions, toolbar, and title
 plot = figure(tooltips = TOOLTIPS,
               tools="pan,wheel_zoom,reset", active_scroll='wheel_zoom',
-            x_range=Range1d(-60, 60), y_range=Range1d(-100, 100), 
-              title=title, plot_width=1400, plot_height=900
+                sizing_mode='stretch_both'
              )
 plot.title.text_font_size = "25px"
 plot.title.align = "center"
